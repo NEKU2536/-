@@ -48,6 +48,29 @@ function loadPuzzle(id){
             cell.classList.remove("correct");
             cell.classList.add("wrong");
           }
+            if(value !== ""){
+    let next = cell.nextElementSibling;
+
+    while(next && next.classList.contains("black")){
+      next = next.nextElementSibling;
+    }
+cell.onkeydown = function(e){
+  if(e.key === "Backspace" && cell.value === ""){
+    let prev = cell.previousElementSibling;
+
+    while(prev && prev.classList.contains("black")){
+      prev = prev.previousElementSibling;
+    }
+
+    if(prev){
+      prev.focus();
+    }
+  }
+};
+    if(next){
+      next.focus();
+    }
+  }
 
           checkClear();
         };

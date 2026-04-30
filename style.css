@@ -51,7 +51,14 @@ button{
   height:34px;
   font-size:20px;
   text-align:center;
-  border:none;
+
+  background:white;
+  border:1px solid #ccc;
+  color:black;
+
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
 }
 
 .black{
@@ -95,11 +102,4 @@ input{
 
 .cell:focus{
   background:#fffacd;
-}
-input{
-  all: unset;
-  width:34px;
-  height:34px;
-  text-align:center;
-  border:1px solid #ccc;
 }

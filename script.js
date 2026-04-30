@@ -1,5 +1,4 @@
 let currentPuzzle = null;
-let answers = [];
 
 function loadPuzzle(id){
 
@@ -17,9 +16,7 @@ function loadPuzzle(id){
   const board = document.getElementById("board");
 
   board.innerHTML = "";
-  board.style.gridTemplateColumns = `repeat(${size}, 34px)`;
-
-  answers = [];
+  board.style.gridTemplateColumns = `repeat(${size}, 40px)`;
 
   for(let y=0; y<size; y++){
     for(let x=0; x<size; x++){
@@ -48,29 +45,6 @@ function loadPuzzle(id){
             cell.classList.remove("correct");
             cell.classList.add("wrong");
           }
-            if(value !== ""){
-    let next = cell.nextElementSibling;
-
-    while(next && next.classList.contains("black")){
-      next = next.nextElementSibling;
-    }
-cell.onkeydown = function(e){
-  if(e.key === "Backspace" && cell.value === ""){
-    let prev = cell.previousElementSibling;
-
-    while(prev && prev.classList.contains("black")){
-      prev = prev.previousElementSibling;
-    }
-
-    if(prev){
-      prev.focus();
-    }
-  }
-};
-    if(next){
-      next.focus();
-    }
-  }
 
           checkClear();
         };

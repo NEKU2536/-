@@ -76,3 +76,23 @@ button{
   font-size:18px;
   margin:15px;
 }
+input{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: white;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.cell{
+  appearance: none;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+
+.cell:focus{
+  background:#fffacd;
+}

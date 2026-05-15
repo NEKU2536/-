@@ -1,3 +1,4 @@
+let currentPuzzleId = "";
 let currentPuzzle = null;
 
 function loadPuzzle(id){
@@ -77,3 +78,19 @@ function backMenu(){
   document.getElementById("menu").classList.remove("hidden");
   document.getElementById("game").classList.add("hidden");
 }
+function updateButtons(){
+
+ const buttons = document.querySelectorAll("button[data-puzzle]");
+
+ buttons.forEach(btn=>{
+
+  const id = btn.dataset.puzzle;
+
+  if(localStorage.getItem(id)){
+   btn.textContent = id + " ✔";
+  }
+
+ });
+}
+
+updateButtons();

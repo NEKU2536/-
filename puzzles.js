@@ -1,3 +1,4 @@
+currentPuzzleId = id;
 const puzzles = {
 
 "8-1":{

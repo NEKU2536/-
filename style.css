@@ -103,3 +103,28 @@ input{
 .cell:focus{
   background:#fffacd;
 }
+.clear-box{
+ background:white;
+ color:black;
+ padding:20px;
+ border-radius:15px;
+ margin:20px auto;
+ width:220px;
+ animation: pop 0.4s ease;
+}
+
+.clear-box h2{
+ color:#ff9800;
+ font-size:32px;
+}
+
+@keyframes pop{
+ from{
+  transform:scale(0.7);
+  opacity:0;
+ }
+ to{
+  transform:scale(1);
+  opacity:1;
+ }
+}

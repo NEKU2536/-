@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>絅文祭クロスワード</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文化祭クロスワード</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>絅文祭クロスワード</header>
+  <h1>文化祭クロスワード</h1>
 
-<div id="menu">
-  <h2>8×8問題</h2>
-  <div class="buttons">
-<button data-puzzle="8-1" onclick="loadPuzzle('8-1')">1</button>
-<button data-puzzle="8-2" onclick="loadPuzzle('8-2')">2</button>
-<button data-puzzle="8-3" onclick="loadPuzzle('8-3')">3</button>
-<button data-puzzle="8-4" onclick="loadPuzzle('8-4')">4</button>
-<button data-puzzle="8-5" onclick="loadPuzzle('8-5')">5</button>
+  <div id="description">
+    スマホで文字を入力してクロスワードを完成させよう！<br>
+    正解なら黒、不正解なら赤になるよ！
   </div>
 
-  <h2>10×10問題</h2>
-  <div class="buttons">
-<button data-puzzle="10-1" onclick="loadPuzzle('10-1')">1</button>
-<button data-puzzle="10-2" onclick="loadPuzzle('10-2')">2</button>
-<button data-puzzle="10-3" onclick="loadPuzzle('10-3')">3</button>
-<button data-puzzle="10-4" onclick="loadPuzzle('10-4')">4</button>
-<button data-puzzle="10-5" onclick="loadPuzzle('10-5')">5</button>
+  <div id="menu">
+
+    <h2>8×8</h2>
+
+    <div class="buttons">
+      <button data-puzzle="8-1" onclick="loadPuzzle('8-1')">1</button>
+      <button data-puzzle="8-2" onclick="loadPuzzle('8-2')">2</button>
+      <button data-puzzle="8-3" onclick="loadPuzzle('8-3')">3</button>
+      <button data-puzzle="8-4" onclick="loadPuzzle('8-4')">4</button>
+      <button data-puzzle="8-5" onclick="loadPuzzle('8-5')">5</button>
+    </div>
+
+    <h2>10×10</h2>
+
+    <div class="buttons">
+      <button data-puzzle="10-1" onclick="loadPuzzle('10-1')">1</button>
+      <button data-puzzle="10-2" onclick="loadPuzzle('10-2')">2</button>
+      <button data-puzzle="10-3" onclick="loadPuzzle('10-3')">3</button>
+      <button data-puzzle="10-4" onclick="loadPuzzle('10-4')">4</button>
+    </div>
+
   </div>
 
-<div id="game" class="hidden">
-  <button onclick="backMenu()">戻る</button>
-  <div id="board"></div>
-  <div id="status"></div>
-</div>
+  <div id="game" class="hidden">
 
-<script src="puzzles.js"></script>
-<script src="script.js"></script>
+    <div id="board"></div>
+
+    <div id="clues"></div>
+
+    <p id="status"></p>
+
+    <button id="backButton" onclick="backMenu()">
+      戻る
+    </button>
+
+  </div>
+
+  <script src="puzzles.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>

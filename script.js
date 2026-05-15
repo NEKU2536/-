@@ -69,9 +69,17 @@ function checkClear(){
     }
   });
 
-  if(ok){
-    document.getElementById("status").textContent = "クリア！";
-  }
+if(ok){
+ document.getElementById("status").innerHTML = `
+  <div class="clear-box">
+   <h2>クリア！</h2>
+   <p>おめでとう！</p>i
+  </div>
+ `;
+
+ localStorage.setItem(currentPuzzleId,true);
+ updateButtons();
+}
 }
 
 function backMenu(){
